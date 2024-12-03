@@ -11,7 +11,7 @@ import (
 
 func Day1Part1(path string) (difference int64) {
 
-	array1, array2 := Readfile(path)
+	array1, array2 := readfile(path)
 
 	slices.Sort(array1)
 	slices.Sort(array2)
@@ -31,7 +31,7 @@ func Day1Part2(path string) (similarity int) {
 
 	count := 0
 
-	array1, array2 := Readfile(path)
+	array1, array2 := readfile(path)
 
 	slices.Sort(array1)
 	slices.Sort(array2)
@@ -55,7 +55,7 @@ func Day1Part2(path string) (similarity int) {
 	return similarity
 }
 
-func Readfile(path string) (array1 []int, array2 []int) {
+func readfile(path string) (array1 []int, array2 []int) {
 	file, err := os.Open(path)
 	if err != nil {
 		panic(err)
